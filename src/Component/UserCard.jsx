@@ -11,7 +11,7 @@ function UserCard (props){
                 <h4>email: {props.user.email}</h4>
                 <h4>Username: {props.user.username}</h4>
                 <h4>Phone: {props.user.phone}</h4>
-                <h4>{props.user.email}</h4>
+                <h4>Cell:{props.user.cell}</h4>
 
             </div>
 

@@ -27,26 +27,23 @@ class Login extends React.Component{
 
         if(this.state.usrname === userdata.username && this.state.password === userdata.password){
             this.props.login()
-            alert('loged in')
+            
         }
     }
     render(){
         
         return (
-            <div>
-                <form >
-                    
-        
-                   <h1>is Loged{this.props.isLogedIn ? ' true' : ' false'}</h1>
+            <div className='new'>
+                {this.props.isLogedIn ? <button onClick={(e) => {e.preventDefault()
+                    this.props.logout()}}>Logout</button> :<form >
+                   
                     <label>User Name: <input onChange={this.onTexChange} type='text' name='usrname' /></label>
                     <label>Password: <input onChange={this.onTexChange}  type='password' name='password' /></label>
                     <button onClick={this.userLogin}>Login</button>
                     
-
-                </form>
-                {this.props.isLogedIn ? <button onClick={(e) => {e.preventDefault()
-                    this.props.logout()}}>Logout</button> 
-                    : <button onClick={this.props.login}>Login</button>}
+                </form>}
+                
+                
             </div>
         );
     }
