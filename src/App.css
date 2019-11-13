@@ -1,22 +1,111 @@
-.App {
-  text-align: center;
-}
+.App{
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  margin: auto;
+  
+  }
+  
+  .App h1{
+      padding: 4rem;
+      text-align: center;
+  }
+  nav{
+      height: 10vh;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      background-color: rgb(16, 183, 212);
+  }
+  nav h1{
+      
+      font-weight: 700;
+  }
+  .nav-link{
+      display: flex;
+      justify-content: space-around;
+      width:40%;
+      list-style: none;
+      align-items: center;
+      font-weight: 400;
+      transition: all 0.8s;
+      
+      
+  }
+  .nav-link a {
+    text-decoration-style: none;
+  }
+  .about{
+      width: 100%;
+      
+      height: auto;
+      padding: 15px;
+      box-sizing: border-box;
+      background-color: #070a0a;
+      color: #ffffff;
+      justify-content: center;
+      text-align: center;
+  }
+  .copy{
+      width: 100%;
+      display: flex;
+      height: auto;
+      padding: 15px;
+      box-sizing: border-box;
+      background-color: #070a0a;
+      color: #ffffff;
+  }
+  .card{
+    display: flex;
+    width:400px;
+    height:auto;
+    overflow: hidden;
+  }
+  .cardheader{
+      display: inline-flex;
+      margin: auto;
+      padding: 10px auto;
+      text-transform: capitalize;
+  }
+  .card img{
+      width:50px;
+      height:50px;
+      border-radius: 50%;
+      margin-right: 10px;
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
+  }
+  .userlist{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: auto;
+    grid-gap: 10px;
+  }
+  @media (max-width:600px){
+      nav{
+          height: auto;
+          display: flex;
+          flex-direction: column;
+      }
+      .nav-link{
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+          transition: all 0.8s;
+          
+      }
+      .App h1{
+          padding: 1rem;
+          text-align: center;
+      }
+      .navdrop{
+          display: block;
+      }
+  }
