@@ -61,16 +61,21 @@
       color: #ffffff;
   }
   .card{
-    display: flex;
     width:400px;
     height:auto;
     overflow: hidden;
+    box-shadow: 0px 2px 8px #a3a3a3;
+    box-sizing: border-box;
+    border-radius: 8px;
   }
   .cardheader{
       display: inline-flex;
       margin: auto;
-      padding: 10px auto;
+      padding: 15px;
       text-transform: capitalize;
+  }
+  .cardbody{
+      padding: 0px 10px;
   }
   .card img{
       width:50px;
@@ -79,16 +84,36 @@
       margin-right: 10px;
 
   }
+  .filter{
+      display: flex;
+      width: auto;
+      height: 100px;
+      justify-content: center;
+  }
+  .filter .input{
+      height: 30px;
+      width:40%;
+      border: none;
+      margin: auto;
+      box-shadow: 0px 2px 8px #353535;
+      border-radius: 4px;
+      padding:10px;
+
+  }
   .userlist{
     display: grid;
     grid-template-columns: auto auto auto;
     width: 100%;
     height: auto;
     margin: auto;
-    padding: auto;
+    padding: 10px 0 10px 0;
     grid-gap: 10px;
+    justify-content: center;
   }
   @media (max-width:600px){
+      .userlist{
+          grid-template-columns: auto;
+      }
       nav{
           height: auto;
           display: flex;
